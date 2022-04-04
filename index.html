@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="box">
+        <form">
+            <h2>Cep Inteligente</h2>
+            <div class="input-field">
+                <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" autocomplete="off">
+                <div class="linha"></div>
+            </div>
+            <input type="button" value="Buscar" onclick="pesquisarCep()">
+        </form>
+    </main>
+
+    <div class="box red" id="resultado" style="display: none;">
+        <div class="column">
+            <h4>Cidade</h4>
+            <input disabled type="text" name="" id="cidade">
+            <h4>Bairro</h4>
+            <input disabled type="text" name="" id="bairro">
+            <h4>IBGE</h4>
+            <input disabled type="text" name="" id="ibge">
+            <h4>DDD</h4>
+            <input disabled type="text" name="" id="ddd">
+            <h4>UF</h4>
+            <input disabled type="text" name="" id="uf">
+            <h4>Complemento</h4>
+            <input disabled type="text" name="" id="complemento">
+        </div>
+    </div>
+</body>
+
+</html>
