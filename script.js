@@ -1,4 +1,11 @@
 const pesquisarCep = async() =>{
+    let carregamento = document.getElementById('loader');
+    carregamento.style.display = "block";	
+    var delay=6000;
+    
+    setTimeout(() => {
+    }, delay);
+
     if(document.getElementById('cep').value != ""){
         const cep = document.getElementById('cep').value
         const url = `http://viacep.com.br/ws/${cep}/json/`
@@ -7,8 +14,9 @@ const pesquisarCep = async() =>{
         const endereco = await dados.json()
         preencherFormulario(endereco)
         console.log(endereco)
+        carregamento.style.display = "none";
     }else{
-        document.getElementById('resultado').style.display = "none"
+        document.getElementById('resultado').style.display = "none";
     }
 }
 
